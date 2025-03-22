@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="clock">
+    <div id="H" class="time"></div>
+    <div class="seperator">:</div>
+    <div id="M" class="time"></div>
+    <div class="seperator">:</div>
+    <div id="S" class="time"></div></div>
+    <input type="number" id="hours" onclick="hours()" placeholder="hours">
+    <input type="number" id="minutes" onclick="minutes()" placeholder="minutes">
+    <input type="number" id="seconds" onclick="seconds()" placeholder="seconds">
+    <button onclick="alarm()">Set Alarm</button>
+    <button id="pause" onclick="pause()" style="display: none;">Pause</button>
+    <ul id="hoursContainer" style="visibility: hidden;">
+        <li class="list hoursList">1</li>
+        <li class="list hoursList">2</li>
+        <li class="list hoursList">3</li>
+        <li class="list hoursList">4</li>
+        <li class="list hoursList">5</li>
+        <li class="list hoursList">6</li>
+        <li class="list hoursList">7</li>
+        <li class="list hoursList">8</li>
+        <li class="list hoursList">9</li>
+        <li class="list hoursList">10</li>
+        <li class="list hoursList">11</li>
+        <li class="list hoursList">12</li>
+        <li class="list hoursList">13</li>
+        <li class="list hoursList">14</li>
+        <li class="list hoursList">15</li>
+        <li class="list hoursList">16</li>
+        <li class="list hoursList">17</li>
+        <li class="list hoursList">18</li>
+        <li class="list hoursList">19</li>
+        <li class="list hoursList">20</li>
+        <li class="list hoursList">21</li>
+        <li class="list hoursList">22</li>
+        <li class="list hoursList">23</li>
+        <li class="list hoursList">24</li>
+    </ul>
+    
+    <ul id="minutesContainer" style="visibility: hidden;">
+        <li class="list minutesList">1</li>
+        <li class="list minutesList">2</li>
+        <li class="list minutesList">3</li>
+        <li class="list minutesList">4</li>
+        <li class="list minutesList">5</li>
+        <li class="list minutesList">6</li>
+        <li class="list minutesList">7</li>
+        <li class="list minutesList">8</li>
+        <li class="list minutesList">9</li>
+        <li class="list minutesList">10</li>
+        <li class="list minutesList">11</li>
+        <li class="list minutesList">12</li>
+        <li class="list minutesList">13</li>
+        <li class="list minutesList">14</li>
+        <li class="list minutesList">15</li>
+        <li class="list minutesList">16</li>
+        <li class="list minutesList">17</li>
+        <li class="list minutesList">18</li>
+        <li class="list minutesList">19</li>
+        <li class="list minutesList">20</li>
+        <li class="list minutesList">21</li>
+        <li class="list minutesList">22</li>
+        <li class="list minutesList">23</li>
+        <li class="list minutesList">24</li>
+        <li class="list minutesList">25</li>
+        <li class="list minutesList">26</li>
+        <li class="list minutesList">27</li>
+        <li class="list minutesList">28</li>
+        <li class="list minutesList">29</li>
+        <li class="list minutesList">30</li>
+        <li class="list minutesList">31</li>
+        <li class="list minutesList">32</li>
+        <li class="list minutesList">33</li>
+        <li class="list minutesList">34</li>
+        <li class="list minutesList">35</li>
+        <li class="list minutesList">36</li>
+        <li class="list minutesList">37</li>
+        <li class="list minutesList">38</li>
+        <li class="list minutesList">39</li>
+        <li class="list minutesList">40</li>
+        <li class="list minutesList">41</li>
+        <li class="list minutesList">42</li>
+        <li class="list minutesList">43</li>
+        <li class="list minutesList">44</li>
+        <li class="list minutesList">45</li>
+        <li class="list minutesList">46</li>
+        <li class="list minutesList">47</li>
+        <li class="list minutesList">48</li>
+        <li class="list minutesList">49</li>
+        <li class="list minutesList">50</li>
+        <li class="list minutesList">51</li>
+        <li class="list minutesList">52</li>
+        <li class="list minutesList">53</li>
+        <li class="list minutesList">54</li>
+        <li class="list minutesList">55</li>
+        <li class="list minutesList">56</li>
+        <li class="list minutesList">57</li>
+        <li class="list minutesList">58</li>
+        <li class="list minutesList">59</li>
+        <li class="list minutesList">60</li>
+    </ul>
+    
+    <ul id="secondsContainer" style="visibility: hidden;">
+        <li class="list secondsList">1</li>
+        <li class="list secondsList">2</li>
+        <li class="list secondsList">3</li>
+        <li class="list secondsList">4</li>
+        <li class="list secondsList">5</li>
+        <li class="list secondsList">6</li>
+        <li class="list secondsList">7</li>
+        <li class="list secondsList">8</li>
+        <li class="list secondsList">9</li>
+        <li class="list secondsList">10</li>
+        <li class="list secondsList">11</li>
+        <li class="list secondsList">12</li>
+        <li class="list secondsList">13</li>
+        <li class="list secondsList">14</li>
+        <li class="list secondsList">15</li>
+        <li class="list secondsList">16</li>
+        <li class="list secondsList">17</li>
+        <li class="list secondsList">18</li>
+        <li class="list secondsList">19</li>
+        <li class="list secondsList">20</li>
+        <li class="list secondsList">21</li>
+        <li class="list secondsList">22</li>
+        <li class="list secondsList">23</li>
+        <li class="list secondsList">24</li>
+        <li class="list secondsList">25</li>
+        <li class="list secondsList">26</li>
+        <li class="list secondsList">27</li>
+        <li class="list secondsList">28</li>
+        <li class="list secondsList">29</li>
+        <li class="list secondsList">30</li>
+        <li class="list secondsList">31</li>
+        <li class="list secondsList">32</li>
+        <li class="list secondsList">33</li>
+        <li class="list secondsList">34</li>
+        <li class="list secondsList">35</li>
+        <li class="list secondsList">36</li>
+        <li class="list secondsList">37</li>
+        <li class="list secondsList">38</li>
+        <li class="list secondsList">39</li>
+        <li class="list secondsList">40</li>
+        <li class="list secondsList">41</li>
+        <li class="list secondsList">42</li>
+        <li class="list secondsList">43</li>
+        <li class="list secondsList">44</li>
+        <li class="list secondsList">45</li>
+        <li class="list secondsList">46</li>
+        <li class="list secondsList">47</li>
+        <li class="list secondsList">48</li>
+        <li class="list secondsList">49</li>
+        <li class="list secondsList">50</li>
+        <li class="list secondsList">51</li>
+        <li class="list secondsList">52</li>
+        <li class="list secondsList">53</li>
+        <li class="list secondsList">54</li>
+        <li class="list secondsList">55</li>
+        <li class="list secondsList">56</li>
+        <li class="list secondsList">57</li>
+        <li class="list secondsList">58</li>
+        <li class="list secondsList">59</li>
+        <li class="list secondsList">60</li>
+    </ul>
+    
+</body>
+<script src="script.js"></script>
+</html>
